@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<form action="edit" method="post">
+    <div class="form-group">
+        <label for="brand">Brand:</label>
+        <input type="text" value="{{ car.brand }}" class="form-control form-control-inline" id="brand" name="brand">
+    </div>
+    <div class="form-group">
+        <label for="license-plate">License plate:</label>
+        <input type="text" value="{{ car.license_plate }}" class="form-control form-control-inline" id="license-plate" name="license-plate">
+    </div>
+    <button type="submit" class="btn btn-default form-control-inline">Submit</button>
+</form>
+
+{% endblock %}

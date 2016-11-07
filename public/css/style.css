@@ -1,0 +1,13 @@
+.table-nonfluid {
+    width: 30%;
+}
+
+#content {
+    margin-left: 20px;
+}
+
+.form-control-inline {
+    min-width: 0;
+    width: auto;
+    display: inline;
+}

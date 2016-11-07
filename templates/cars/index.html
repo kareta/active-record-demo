@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<a href="/cars/create" class="btn btn-primary">Create new car</a>
+<table class="table table-nonfluid">
+    <thead>
+    <tr>
+        <td class="col-md-3">Brand</td>
+        <td class="col-md-3">License plate</td>
+        <td class="col-md-1">Edit</td>
+        <td class="col-md-1">Delete</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% if cars is empty %}
+        <tr>
+            <td colspan="5" align="center">There no pages.</td>
+        </tr>
+    {% else %}
+    {% for car in cars %}
+    <tr>
+        <td>{{ car.brand }}</td>
+        <td>{{ car.license_plate }}</td>
+        <td>
+            <a href="/cars/{{ car.id }}/edit">
+                <span class="glyphicon glyphicon-edit"></span>
+            </a>
+        </td>
+        <td>
+            <a href="/cars/{{ car.id }}/delete">
+                <span class="glyphicon glyphicon-remove"></span>
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+
+    </tbody>
+</table>
+{% endblock %}

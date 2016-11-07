@@ -1,0 +1,17 @@
+{
+  "autoload": {
+    "classmap": [
+      "database/",
+      "helpers/",
+      "views/"
+    ]
+  },
+
+  "require": {
+    "usmanhalalit/pixie": "2.*@dev",
+    "slim/slim": "^3.4",
+    "slim/php-view": "^2.1",
+    "slim/twig-view": "^2.1",
+    "slim/views": "^0.1.3"
+  }
+}
